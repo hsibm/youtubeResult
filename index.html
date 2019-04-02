@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Data</title>
+    <style>
+            div {
+              
+              margin: 85px 500px 750px 490px;
+              
+            }
+            h1{color:darkblue }
+            img {
+                     max-width: 10%;
+                     height: auto;
+                }
+            p {
+              
+              margin: 300px 100px 0px 0px;
+              
+            }
+    </style>   
+  <img src="">  
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js …"></script>
+    <script>
+    $("#formId").submit(function (event) {
+        console.log($("#formId").serialize())
+      $.post('/video', $("#formId").serialize(), function (data) {
+     console.log(data) //data is the response from the backend
+      });
+      event.preventDefault();
+    });
+    </script>
+    <div>
+    <h1 color='darkblue'> Search by Query </h1>
+    <form method="POST" action="/video" id="formId">
+        <label><input type="text" name="query" required value=''></label>
+       
+        <input type="submit" value="Search">
+    </form>
+   
+    </div>
+    
+</body>
+</html>
