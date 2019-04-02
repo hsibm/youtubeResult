@@ -108,7 +108,7 @@ app.post('/video', function(req,res){
 
 //********* The home page 
 app.get('/page_d_accueil', function (req, res) {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 
