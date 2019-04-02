@@ -58,7 +58,7 @@ youTube.addParam('order', 'date');
 youTube.addParam('type', 'video');
 
 
-youTube.search(Query,50, /*{'order','date'},*/ function(error, result) {
+youTube.search(Query,50,  function(error, result) {
 
 function savedata (index) {
 var items = result["items"];
